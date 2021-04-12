@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BC95F1"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="230dp">
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="Phone Photo Prints"
+            android:textAlignment="center"
+            android:textColor="#204ED6"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/numberInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Enter number of prints:"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#D62020"
+            android:textColorHint="#6E6B6B"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/fourBySix"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:checked="false"
+                android:fontFamily="sans-serif"
+                android:onClick="radioButtonClick"
+                android:text="4x6 (19 cents)"
+                android:textColor="#204ED6"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/fiveBySeven"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="sans-serif"
+                android:onClick="radioButtonClick"
+                android:text="5x7 (49 cents)"
+                android:textColor="#204ED6"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/eightByTen"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="sans-serif"
+                android:onClick="radioButtonClick"
+                android:text="8x10 (79 cents)"
+                android:textColor="#204ED6"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="189dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#0066FF"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:onClick="buttonClick"
+                android:text="Order Prints" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:hint="Your total cost is $0.00"
+            android:textAlignment="center"
+            android:textColorHint="#BF1B6DE8"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
