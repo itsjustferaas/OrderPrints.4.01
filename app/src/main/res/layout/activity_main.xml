@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="199dp"
-        tools:layout_editor_absoluteY="230dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="29dp">
 
         <TextView
             android:id="@+id/appName"
@@ -39,6 +39,7 @@
             android:textSize="24sp" />
 
         <RadioGroup
+            android:id="@+id/choices"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -48,7 +49,6 @@
                 android:layout_height="60dp"
                 android:checked="false"
                 android:fontFamily="sans-serif"
-                android:onClick="radioButtonClick"
                 android:text="4x6 (19 cents)"
                 android:textColor="#204ED6"
                 android:textColorHint="#FFFFFF"
@@ -59,7 +59,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:fontFamily="sans-serif"
-                android:onClick="radioButtonClick"
                 android:text="5x7 (49 cents)"
                 android:textColor="#204ED6"
                 android:textSize="20sp" />
@@ -69,30 +68,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:fontFamily="sans-serif"
-                android:onClick="radioButtonClick"
                 android:text="8x10 (79 cents)"
                 android:textColor="#204ED6"
                 android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="189dp"
-                android:layout_height="85dp"
-                android:layout_gravity="center"
-                android:backgroundTint="#0066FF"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:onClick="buttonClick"
-                android:text="Order Prints" />
         </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="189dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#0066FF"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Order Prints" />
 
         <TextView
             android:id="@+id/result"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:hint="Your total cost is $0.00"
             android:textAlignment="center"
+            android:textColor="#BF1B6DE8"
             android:textColorHint="#BF1B6DE8"
             android:textSize="24sp" />
 
